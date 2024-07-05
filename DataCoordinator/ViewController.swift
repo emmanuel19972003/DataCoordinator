@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func goToNextView(_ sender: UIButton) {
-        print("\(nameTextFiled.text)")
-        print("Emma")
+        MainDataCoodinator.share?.setName(name: nameTextFiled.text ?? "emma")
+        let vc = secondView()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
