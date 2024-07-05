@@ -13,7 +13,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBOutlet weak var nameTextFiled: UITextField!
+    
+    
+    @IBAction func goToNextView(_ sender: UIButton) {
+        print("\(nameTextFiled.text)")
+        print("Emma")
+    }
+    
+    
+    
 }
 
