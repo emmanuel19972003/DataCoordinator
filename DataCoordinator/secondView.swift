@@ -10,6 +10,10 @@ import UIKit
 
 class secondView: UIViewController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        textField.text = MainDataCoodinator.share.lastName
+    }
+    
     var titleLabel: UILabel = {
         let view: UILabel = UILabel(frame: CGRect(x: 50, y: 150, width: 300, height: 50))
         view.text = "enter your last Name"

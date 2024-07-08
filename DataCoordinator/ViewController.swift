@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         setInfoLabels()
+        nameTextFiled.text = MainDataCoodinator.share.name
     }
     
     

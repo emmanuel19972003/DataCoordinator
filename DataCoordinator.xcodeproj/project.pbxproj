@@ -109,8 +109,8 @@
 			children = (
 				9F78942B2C38A8BD00FAF22E /* AppDelegate.swift */,
 				9F78942D2C38A8BD00FAF22E /* SceneDelegate.swift */,
-				9F78942F2C38A8BD00FAF22E /* ViewController.swift */,
 				676A767B2C38B6C900C2EDAC /* MainDataCoodinator.swift */,
+				9F78942F2C38A8BD00FAF22E /* ViewController.swift */,
 				676A767D2C38B77B00C2EDAC /* secondView.swift */,
 				9F78945B2C3C25BC00FAF22E /* thirdView.swift */,
 				9F78945D2C3C298A00FAF22E /* resultView.swift */,
