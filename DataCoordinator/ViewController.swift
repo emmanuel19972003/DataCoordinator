@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    private func setInfoLabels() {
+    func setInfoLabels() {
         nameLabel.text = "the name value is: \(MainDataCoodinator.share.name ?? "")"
         lastNameLabel.text = "the las tName value is: \(MainDataCoodinator.share.lastName ?? "")"
         ageName.text = "the age value is: \(MainDataCoodinator.share.age ?? "")"

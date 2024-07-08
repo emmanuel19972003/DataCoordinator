@@ -65,7 +65,7 @@ class resultView: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    private func setLabels() {
+    func setLabels() {
         nameLabel.text = MainDataCoodinator.share.name
         lastNameLabel.text = MainDataCoodinator.share.lastName
         ageLabel.text = MainDataCoodinator.share.age
