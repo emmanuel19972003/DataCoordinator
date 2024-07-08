@@ -8,20 +8,43 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInfoLabels()
+    }
+    
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
+    @IBOutlet weak var ageName: UILabel!
+    
     
     @IBOutlet weak var nameTextFiled: UITextField!
     
     
     @IBAction func goToNextView(_ sender: UIButton) {
-        MainDataCoodinator.share?.setName(name: nameTextFiled.text ?? "emma")
+        guard let name = nameTextFiled.text else {
+            return
+        }
+        MainDataCoodinator.share.name = name
         let vc = secondView()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    private func setInfoLabels() {
+        nameLabel.text = "the name value is: \(MainDataCoodinator.share.name ?? "")"
+        lastNameLabel.text = "the las tName value is: \(MainDataCoodinator.share.lastName ?? "")"
+        ageName.text = "the age value is: \(MainDataCoodinator.share.age ?? "")"
+        
+    }
+    
+    
     
     
     

@@ -11,19 +11,24 @@ class MainDataCoodinator {
     
     var name: String?
     
-    static var share: MainDataCoodinator? = MainDataCoodinator()
+    var lastName: String?
+    
+    var age: String?
+    
+    static private var _shared: MainDataCoodinator?
+    
+    static var share: MainDataCoodinator {
+        if _shared == nil {
+            _shared = MainDataCoodinator()
+        }
+        return _shared!
+    }
+    
+    private init() {
+        print("deinit")
+    }
     
     static func reset() {
-        share = nil
-    }
-    
-    private init() {}
-    
-    deinit {
-        print("se borro el singelto")
-    }
-    
-    func setName(name: String) {
-        self.name = name
+        _shared = nil
     }
 }

@@ -1,5 +1,12 @@
 //
-//  secondView.swift
+//  File.swift
+//  DataCoordinator
+//
+//  Created by Emmanuel Zambrano on 8/07/24.
+//
+
+//
+//  thirdView.swift
 //  DataCoordinator
 //
 //  Created by Emmanuel Zambrano Quitian on 7/5/24.
@@ -8,11 +15,11 @@
 import Foundation
 import UIKit
 
-class secondView: UIViewController {
+class thirdView: UIViewController {
     
     var titleLabel: UILabel = {
         let view: UILabel = UILabel(frame: CGRect(x: 50, y: 150, width: 300, height: 50))
-        view.text = "enter your last Name"
+        view.text = "enter your Age"
         view.textColor = .black
         view.translatesAutoresizingMaskIntoConstraints = true
         return view
@@ -21,7 +28,7 @@ class secondView: UIViewController {
     
     var textField: UITextField = {
         let view = UITextField(frame: CGRect(x: 50, y: 200, width: 300, height: 50))
-        view.placeholder = "last Name"
+        view.placeholder = "Age"
         view.borderStyle = .roundedRect
         view.translatesAutoresizingMaskIntoConstraints = true
         return view
@@ -48,16 +55,18 @@ class secondView: UIViewController {
     
     @objc
     func buttonAction1(sender: UIButton!) {
-        guard let lastName = textField.text else {
+        guard let age = textField.text else {
             return
         }
-        MainDataCoodinator.share.lastName = lastName
-        let vc = thirdView()
+        MainDataCoodinator.share.age = age
+        let vc = resultView()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 
+
 #Preview() {
-    secondView()
+    thirdView()
 }
+
