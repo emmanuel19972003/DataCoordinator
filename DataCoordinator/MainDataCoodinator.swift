@@ -24,7 +24,9 @@ class MainDataCoodinator {
         return _shared!
     }
     
-    private init() {
+    private init() {}
+    
+    deinit {
         print("deinit")
     }
     

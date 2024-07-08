@@ -49,7 +49,6 @@ class secondView: UIViewController {
         self.view.addSubview(button)
     }
     
-    
     @objc
     func buttonAction1(sender: UIButton!) {
         guard let lastName = textField.text else {

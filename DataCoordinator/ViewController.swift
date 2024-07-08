@@ -18,16 +18,13 @@ class ViewController: UIViewController {
         nameTextFiled.text = MainDataCoodinator.share.name
     }
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
     @IBOutlet weak var ageName: UILabel!
     
-    
     @IBOutlet weak var nameTextFiled: UITextField!
-    
     
     @IBAction func goToNextView(_ sender: UIButton) {
         guard let name = nameTextFiled.text else {
@@ -42,12 +39,6 @@ class ViewController: UIViewController {
         nameLabel.text = "the name value is: \(MainDataCoodinator.share.name ?? "")"
         lastNameLabel.text = "the las tName value is: \(MainDataCoodinator.share.lastName ?? "")"
         ageName.text = "the age value is: \(MainDataCoodinator.share.age ?? "")"
-        
     }
-    
-    
-    
-    
-    
 }
 
