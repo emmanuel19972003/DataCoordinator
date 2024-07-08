@@ -12,6 +12,8 @@ import UIKit
 
 class resultView: UIViewController {
     
+    var personalData: personalData?
+    
     var nameLabel: UILabel = {
         let view: UILabel = UILabel(frame: CGRect(x: 50, y: 100, width: 300, height: 50))
         view.text = ""
@@ -68,9 +70,9 @@ class resultView: UIViewController {
     }
     
     private func setLabels() {
-        nameLabel.text = MainDataCoodinator.share.name
-        lastNameLabel.text = MainDataCoodinator.share.lastName
-        ageLabel.text = MainDataCoodinator.share.age
+        nameLabel.text = personalData?.name
+        lastNameLabel.text = personalData?.lastName
+        ageLabel.text = personalData?.age
     }
 }
 

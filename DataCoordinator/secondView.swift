@@ -10,6 +10,12 @@ import UIKit
 
 class secondView: UIViewController {
     
+    var personalData: personalData?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        textField.text = personalData?.lastName
+    }
+    
     var titleLabel: UILabel = {
         let view: UILabel = UILabel(frame: CGRect(x: 50, y: 150, width: 300, height: 50))
         view.text = "enter your last Name"
@@ -48,11 +54,14 @@ class secondView: UIViewController {
     
     @objc
     func buttonAction1(sender: UIButton!) {
-        guard let lastName = textField.text else {
+        guard let lastName = textField.text,
+        var personData = personalData else {
             return
         }
-        MainDataCoodinator.share.lastName = lastName
+        personData.lastName = lastName
+        self.personalData = personData
         let vc = thirdView()
+        vc.personalData = personData
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

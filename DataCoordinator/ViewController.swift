@@ -7,23 +7,22 @@
 
 import UIKit
 
+struct personalData {
+    var name: String?
+    var lastName: String?
+    var age: String?
+}
 class ViewController: UIViewController {
+    
+    var personalData: personalData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setInfoLabels()
+        nameTextFiled.text = personalData?.name
     }
-    
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    
-    @IBOutlet weak var lastNameLabel: UILabel!
-    
-    @IBOutlet weak var ageName: UILabel!
-    
     
     @IBOutlet weak var nameTextFiled: UITextField!
     
@@ -32,21 +31,10 @@ class ViewController: UIViewController {
         guard let name = nameTextFiled.text else {
             return
         }
-        MainDataCoodinator.share.name = name
+        personalData = DataCoordinator.personalData(name: name)
         let vc = secondView()
+        vc.personalData = personalData
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    private func setInfoLabels() {
-        nameLabel.text = "the name value is: \(MainDataCoodinator.share.name ?? "")"
-        lastNameLabel.text = "the las tName value is: \(MainDataCoodinator.share.lastName ?? "")"
-        ageName.text = "the age value is: \(MainDataCoodinator.share.age ?? "")"
-        
-    }
-    
-    
-    
-    
-    
 }
 

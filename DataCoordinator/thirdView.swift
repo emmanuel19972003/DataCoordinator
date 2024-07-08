@@ -17,6 +17,12 @@ import UIKit
 
 class thirdView: UIViewController {
     
+    var personalData: personalData?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        textField.text = personalData?.age
+    }
+    
     var titleLabel: UILabel = {
         let view: UILabel = UILabel(frame: CGRect(x: 50, y: 150, width: 300, height: 50))
         view.text = "enter your Age"
@@ -55,11 +61,14 @@ class thirdView: UIViewController {
     
     @objc
     func buttonAction1(sender: UIButton!) {
-        guard let age = textField.text else {
+        guard let age = textField.text,
+            var personalData = personalData else {
             return
         }
-        MainDataCoodinator.share.age = age
+        personalData.age = age
+        self.personalData = personalData
         let vc = resultView()
+        vc.personalData = personalData
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

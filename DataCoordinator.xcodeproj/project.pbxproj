@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		676A767C2C38B6C900C2EDAC /* MainDataCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676A767B2C38B6C900C2EDAC /* MainDataCoodinator.swift */; };
 		676A767E2C38B77B00C2EDAC /* secondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676A767D2C38B77B00C2EDAC /* secondView.swift */; };
 		9F78942C2C38A8BD00FAF22E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F78942B2C38A8BD00FAF22E /* AppDelegate.swift */; };
 		9F78942E2C38A8BD00FAF22E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F78942D2C38A8BD00FAF22E /* SceneDelegate.swift */; };
@@ -40,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		676A767B2C38B6C900C2EDAC /* MainDataCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataCoodinator.swift; sourceTree = "<group>"; };
 		676A767D2C38B77B00C2EDAC /* secondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondView.swift; sourceTree = "<group>"; };
 		9F7894282C38A8BD00FAF22E /* DataCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F78942B2C38A8BD00FAF22E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				9F78942B2C38A8BD00FAF22E /* AppDelegate.swift */,
 				9F78942D2C38A8BD00FAF22E /* SceneDelegate.swift */,
 				9F78942F2C38A8BD00FAF22E /* ViewController.swift */,
-				676A767B2C38B6C900C2EDAC /* MainDataCoodinator.swift */,
 				676A767D2C38B77B00C2EDAC /* secondView.swift */,
 				9F78945B2C3C25BC00FAF22E /* thirdView.swift */,
 				9F78945D2C3C298A00FAF22E /* resultView.swift */,
@@ -270,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676A767C2C38B6C900C2EDAC /* MainDataCoodinator.swift in Sources */,
 				9F78945C2C3C25BC00FAF22E /* thirdView.swift in Sources */,
 				9F78945E2C3C298A00FAF22E /* resultView.swift in Sources */,
 				676A767E2C38B77B00C2EDAC /* secondView.swift in Sources */,
